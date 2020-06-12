@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="abc();">ABC</button>
+    <button ondblclick="xyz();">XYZ</button>
+    <button onmouseover="testingCondition();">testingCondition</button>
+    <button onmouseout="test();">Test</button>
+
+    <script>
+
+
+
+        function abc() {
+            alert('Hello')
+            alert('I am a student')
+            alert('at SuperTech')
+            confirm('What is your decision?');
+        }
+
+
+
+        function xyz() {
+            let a = 'yasir';
+            a = 20;
+            document.write(a, '<br>');
+            a = 25.6;
+            document.write(a, '<br>');
+            a = 's';
+            document.write(a, '<br>');
+            a = 'Yasir';
+            document.write(a, '<br>');
+        }
+
+        function testingCondition() {
+            a = -10;
+            if (a > 0) {
+                document.write('The number is positive', '<br>');
+                document.write('Thanks for testing', '<br>');
+                document.write('Bye', '<br>');
+            } else if (a < 0) {
+                document.write('The number is Negative', '<br>');
+                document.write('Sorry for deniel', '<br>');
+            } else {
+                document.write('The number is zero', '<br>');
+            }
+        }
+
+        function test() {
+            let username = 'yasir';
+            let password = '1234';
+
+            if (username == 'yasir4' || password == '12344') {
+                document.write("Congratulation! You are logged in", '<br>')
+            } else {
+                document.write('Incorrect Username / Password', '<br>');
+            }
+        }
+
+
+        //now I am going to call the functions
+        // abc();
+        //xyz();
+        //testingCondition();
+        //test();
+
+
+        /* Events in javascrip
+             1 - click ------------- onclick
+             2 - dblclick ---------- ondblclick
+             3 - mouseover
+             4 - mouseleave
+             5 - keypress
+             6 - keyup
+             https://www.w3schools.com/JS/js_events_examples.asp
+        */
+
+
+    </script>
+</body>
+
+</html>
