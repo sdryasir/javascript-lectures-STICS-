@@ -4,85 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript</title>
+    <style>
+        #box {
+            width: 300px;
+            background-color: orange;
+            padding: 8px;
+            display: none;
+        }
+    </style>
 </head>
 
-<body>
+<body id="body">
 
-    <button onclick="abc();">ABC</button>
-    <button ondblclick="xyz();">XYZ</button>
-    <button onmouseover="testingCondition();">testingCondition</button>
-    <button onmouseout="test();">Test</button>
+    <button onclick="changeContents();">change the contents</button>
+    <button onclick="hide();">Hide</button>
+    <button onclick="show();">Show</button>
+
+    <p id="para">I am the content</p>
+    <div id="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsum voluptatum quisquam vel accusamus optio
+        quaerat reiciendis tenetur nemo illo officia dignissimos molestias odit. Similique, adipisci mollitia.
+        Assumenda, aspernatur distinctio?
+    </div>
 
     <script>
-
-
-
-        function abc() {
-            alert('Hello')
-            alert('I am a student')
-            alert('at SuperTech')
-            confirm('What is your decision?');
+        function changeContents() {
+            document.getElementById('body').style.backgroundColor = 'orange';
+            document.getElementById('para').innerHTML = 'I ma the new content';
+            document.getElementById('para').style.color = 'red';
+            document.getElementById('para').style.backgroundColor = 'green';
+            document.getElementById('para').style.fontSize = '50px';
         }
-
-
-
-        function xyz() {
-            let a = 'yasir';
-            a = 20;
-            document.write(a, '<br>');
-            a = 25.6;
-            document.write(a, '<br>');
-            a = 's';
-            document.write(a, '<br>');
-            a = 'Yasir';
-            document.write(a, '<br>');
+        function hide() {
+            document.getElementById('box').style.display = 'none';
         }
-
-        function testingCondition() {
-            a = -10;
-            if (a > 0) {
-                document.write('The number is positive', '<br>');
-                document.write('Thanks for testing', '<br>');
-                document.write('Bye', '<br>');
-            } else if (a < 0) {
-                document.write('The number is Negative', '<br>');
-                document.write('Sorry for deniel', '<br>');
-            } else {
-                document.write('The number is zero', '<br>');
-            }
+        function show() {
+            document.getElementById('box').style.display = 'block';
         }
-
-        function test() {
-            let username = 'yasir';
-            let password = '1234';
-
-            if (username == 'yasir4' || password == '12344') {
-                document.write("Congratulation! You are logged in", '<br>')
-            } else {
-                document.write('Incorrect Username / Password', '<br>');
-            }
-        }
-
-
-        //now I am going to call the functions
-        // abc();
-        //xyz();
-        //testingCondition();
-        //test();
-
-
-        /* Events in javascrip
-             1 - click ------------- onclick
-             2 - dblclick ---------- ondblclick
-             3 - mouseover
-             4 - mouseleave
-             5 - keypress
-             6 - keyup
-             https://www.w3schools.com/JS/js_events_examples.asp
-        */
-
-
     </script>
 </body>
 
