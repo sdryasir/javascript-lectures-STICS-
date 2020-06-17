@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        #box {
+            width: 300px;
+            background-color: orange;
+            padding: 8px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body id="body">
+
+    <button onclick="color();">Change Color</button>
+
+    <p class="para">Lorem, ipsum.</p>
+    <p class="para">I am the paragraph 1</p>
+    <p class="para">I am the paragraph 2</p>
+    <p class="para">I am the paragraph 3</p>
+    <p class="para">I am the paragraph 4</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro rem impedit ab voluptatem esse deserunt fuga
+        mollitia magnam, at nisi ipsum excepturi voluptate maiores tempore doloremque quaerat omnis sed nemo?</p>
+
+
+
+    <script>
+        //array in javascript
+        // let a = [25, 'Ali', 32, 25, 'Yasir', 'Shahid', 'Waqas', 'Amna'];
+        // console.log(a[1], a[3], a[5]);
+        function color() {
+            let list_of_para = document.getElementsByClassName('para');
+            console.log(list_of_para[3]);
+
+            for (let i = 0; i <= 5; i++) {
+                list_of_para[i].style.color = 'red';
+                list_of_para[i].style.backgroundColor = 'orange';
+                list_of_para[i].style.padding = '16px';
+            }
+        }
+
+        // for (let i = 1; i < 10; i = i + 1) {
+        //     document.write(i, 'Hello', '<br>');
+        // }
+
+
+            // let i = 1;
+            // console.log(i)
+            // i = i - 1
+            // console.log(i)
+            // i = i + 5
+            // console.log(i)
+
+    </script>
+</body>
+
+</html>
